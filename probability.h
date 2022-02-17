@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <numeric>
 #include <iostream>
+#include <vector>
 
 double getMean(const std::vector<double> &data);
 double getStdDev(const std::vector<double> &data, const double &mean);
