@@ -8,7 +8,7 @@ double getMean(const std::vector<double> &data)
         return 0;
 
     auto const count = static_cast<double>(data.size());
-    return std::reduce(data.begin(), data.end()) / count;
+    return std::accumulate(data.begin(), data.end(), 0.0) / count;
 }
 
 // stddev calculation taken from http://stackoverflow.com/questions/7616511/calculate-mean-and-standard-deviation-from-a-vector-of-samples-in-c-using-boos
