@@ -2,6 +2,7 @@
 #include "preprocessing.h"
 #include "probability.h"
 #include <iostream>
+#include <chrono>
 
 using namespace std;
 
@@ -11,6 +12,8 @@ int main(int argc, char **argv)
     {
         return -1;
     }
+
+    // auto start = chrono::high_resolution_clock::now();
 
     vector<vector<double>> trainingData = dataSetToVector(argv[1]);
     std::vector<std::vector<double>> testingData = dataSetToVector(argv[2]);
@@ -29,6 +32,12 @@ int main(int argc, char **argv)
     {
         cout << i << endl;
     }
+
+    // auto stop = chrono::high_resolution_clock::now();
+
+    // auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
+
+    // cout << "Classifier took " << duration.count() << " microseconds to execute" << endl;
 
     return 0;
 }
